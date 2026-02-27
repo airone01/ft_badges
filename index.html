@@ -2,503 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>42 Badges Catalog</title>
+    <title>42 Badge Builder</title>
     <style>
       body {
-        font-family: system-ui, sans-serif;
+        font-family: sans-serif;
         background: #0d1117;
-        color: #c9d1d9;
-        padding: 2rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
       }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 2rem;
-      }
-      .card {
+      .controls {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
         background: #161b22;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 8px;
-        text-align: center;
-        border: 1px solid #30363d;
       }
-      img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
-      }
-      code {
-        display: block;
-        background: #010409;
+      select {
         padding: 0.5rem;
+        background: #0d1117;
+        color: white;
+        border: 1px solid #30363d;
         border-radius: 4px;
-        font-size: 0.8rem;
-        word-wrap: break-word;
-        color: #58a6ff;
       }
-      h1 {
-        border-bottom: 1px solid #30363d;
-        padding-bottom: 1rem;
+      #markdown-output {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #010409;
+        border: 1px solid #30363d;
+        color: #58a6ff;
+        font-family: monospace;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <h1>📚 42 Project Badges</h1>
-    <p>
-      Find your project, score, and preferred style. Copy the markdown below the
-      badge!
-    </p>
+    <h1>🛠️ Build Your Badge</h1>
+    <a href="index.html" style="color: #58a6ff; margin-bottom: 2rem"
+      >&larr; Back to Full Catalog</a
+    >
 
-    <div class="grid">
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--0--text--dark.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 0)<br />
-          <small>dark | text</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--0--text--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--0--text--light.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 0)<br />
-          <small>light | text</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--0--text--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--0--logo--dark.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 0)<br />
-          <small>dark | logo</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--0--logo--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--0--logo--light.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 0)<br />
-          <small>light | logo</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--0--logo--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--50--text--dark.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 50)<br />
-          <small>dark | text</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--50--text--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--50--text--light.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 50)<br />
-          <small>light | text</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--50--text--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--50--logo--dark.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 50)<br />
-          <small>dark | logo</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--50--logo--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--50--logo--light.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 50)<br />
-          <small>light | logo</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--50--logo--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--100--text--dark.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 100)<br />
-          <small>dark | text</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--100--text--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--100--text--light.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 100)<br />
-          <small>light | text</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--100--text--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--100--logo--dark.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 100)<br />
-          <small>dark | logo</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--100--logo--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--100--logo--light.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 100)<br />
-          <small>light | logo</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--100--logo--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--125--text--dark.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 125)<br />
-          <small>dark | text</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--125--text--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--125--text--light.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 125)<br />
-          <small>light | text</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--125--text--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--125--logo--dark.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 125)<br />
-          <small>dark | logo</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--125--logo--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--125--logo--light.svg"
-          alt="libft badge"
-        />
-        <p>
-          <strong>libft</strong> (Score: 125)<br />
-          <small>light | logo</small>
-        </p>
-        <code
-          >![libft](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/libft--125--logo--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--0--text--dark.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 0)<br />
-          <small>dark | text</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--0--text--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--0--text--light.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 0)<br />
-          <small>light | text</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--0--text--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--0--logo--dark.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 0)<br />
-          <small>dark | logo</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--0--logo--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--0--logo--light.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 0)<br />
-          <small>light | logo</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--0--logo--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--50--text--dark.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 50)<br />
-          <small>dark | text</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--50--text--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--50--text--light.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 50)<br />
-          <small>light | text</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--50--text--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--50--logo--dark.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 50)<br />
-          <small>dark | logo</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--50--logo--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--50--logo--light.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 50)<br />
-          <small>light | logo</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--50--logo--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--100--text--dark.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 100)<br />
-          <small>dark | text</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--100--text--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--100--text--light.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 100)<br />
-          <small>light | text</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--100--text--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--100--logo--dark.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 100)<br />
-          <small>dark | logo</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--100--logo--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--100--logo--light.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 100)<br />
-          <small>light | logo</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--100--logo--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--125--text--dark.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 125)<br />
-          <small>dark | text</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--125--text--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--125--text--light.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 125)<br />
-          <small>light | text</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--125--text--light.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--125--logo--dark.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 125)<br />
-          <small>dark | logo</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--125--logo--dark.svg)</code
-        >
-      </div>
-      
-      <div class="card">
-        <img
-          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--125--logo--light.svg"
-          alt="minishell badge"
-        />
-        <p>
-          <strong>minishell</strong> (Score: 125)<br />
-          <small>light | logo</small>
-        </p>
-        <code
-          >![minishell](https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/minishell--125--logo--light.svg)</code
-        >
-      </div>
-      
+    <div class="controls">
+      <select id="sel-project" onchange="updateBadge()">
+        <option value="libft">libft</option>
+        <option value="minishell">minishell</option>
+      </select>
+      <select id="sel-score" onchange="updateBadge()">
+        <option value="0">0</option>
+        <option value="50">50</option>
+        <option value="100" selected>100</option>
+        <option value="125">125</option>
+      </select>
+      <select id="sel-logo" onchange="updateBadge()">
+        <option value="text">"42" as Text</option>
+        <option value="logo">42 Vector Logo</option>
+      </select>
+      <select id="sel-theme" onchange="updateBadge()">
+        <option value="dark">Dark Theme</option>
+        <option value="light">Light Theme</option>
+      </select>
     </div>
+
+    <img
+      id="badge-preview"
+      src=""
+      alt="Badge Preview"
+      style="max-width: 300px"
+    />
+
+    <div id="markdown-output"></div>
+
+    <script>
+      const BASE_URL = "https://airone01.github.io/ft_badges";
+
+      function updateBadge() {
+        const project = document.getElementById("sel-project").value;
+        const score = document.getElementById("sel-score").value;
+        const logo = document.getElementById("sel-logo").value;
+        const theme = document.getElementById("sel-theme").value;
+
+        const filename = `${project}--${score}--${logo}--${theme}.svg`;
+        const fullPath = `${BASE_URL}/${filename}`;
+
+        document.getElementById("badge-preview").src = filename;
+
+        const markdown = `![${project} Badge](${fullPath})`;
+        document.getElementById("markdown-output").textContent = markdown;
+      }
+
+      window.onload = updateBadge;
+    </script>
   </body>
 </html>

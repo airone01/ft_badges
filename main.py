@@ -42,14 +42,6 @@ def render_svg(project, score, logo_style, theme, custom_color=None):
         "logo_style": logo_style
     }
 
-def generate_catalog(badges_metadata):
-    """Generates the index.html documentation page at the root of the repo."""
-    html_template = env.get_template('catalog_template.html')
-    rendered_html = html_template.render(badges=badges_metadata)
-
-    with open('index.html', 'w') as f:
-        f.write(rendered_html)
-
 def run_batch():
     """Generates the locked matrix of images and builds the catalog."""
     matrices = config["batch_matrices"]
@@ -67,8 +59,6 @@ def run_batch():
         subprocess.run(["pnpm", "exec", "svgo", "-f", OUTPUT_DIR], check=True, stdout=subprocess.DEVNULL)
     except Exception as e:
         print(f"SVGO skipped or failed: {e}")
-
-    generate_catalog(generated_badges)
 
 def setup_cli():
     parser = argparse.ArgumentParser(description="42 Badge Generator CLI")
