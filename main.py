@@ -1,89 +1,71 @@
 #!/usr/bin/env python3
+import argparse
+import json
 import os
 import subprocess
 from jinja2 import Environment, FileSystemLoader
 
-PROJECTS = [
-    {"name": "libft", "base_color": "#00babc"},
-    {"name": "minishell", "base_color": "#00babc", "threshold": 75},
-]
-SCORES = [0, 50, 100, 125]
-THEMES = {
-    "dark": {"bg_color": "#121418", "text_color": "#ffffff"},
-    "light": {"bg_color": "#f0f6fc", "text_color": "#24292f"}
-}
-LOGO_STYLES = ["text", "logo"]
-FAIL_COLOR = "#E74C3C"
+with open('config.json', 'r') as f:
+    config = json.load(f)
+
 OUTPUT_DIR = "badges"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+env = Environment(loader=FileSystemLoader('.'))
 
-def setup_env():
-    """Ensure output directory exists and setup Jinja environment."""
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    return Environment(loader=FileSystemLoader('.'))
-
-def generate_svgs(env):
-    """Generates all SVG permutations and returns a list of metadata for the HTML catalog."""
-    svg_template = env.get_template('badge_template.svg')
-    generated_badges = []
-
-    print("🎨 Generating SVGs...")
-    for project in PROJECTS:
-        threshold = project.get("threshold", 50)
-        clean_name = project['name'].replace(' ', '_').lower()
-        
-        for score in SCORES:
-            accent = FAIL_COLOR if score < threshold else project["base_color"]
-            
-            for theme_name, theme_colors in THEMES.items():
-                for logo in LOGO_STYLES:
-                    filename = f"{clean_name}--{score}--{logo}--{theme_name}.svg"
-                    
-                    rendered_svg = svg_template.render(
-                        project_name=project["name"],
-                        score=score,
-                        accent_color=accent,
-                        bg_color=theme_colors["bg_color"],
-                        text_color=theme_colors["text_color"],
-                        logo_style=logo
-                    )
-                    
-                    filepath = os.path.join(OUTPUT_DIR, filename)
-                    with open(filepath, 'w') as f:
-                        f.write(rendered_svg)
-                    
-                    generated_badges.append({
-                        "filename": filename,
-                        "project_name": project["name"],
-                        "score": score,
-                        "theme": theme_name,
-                        "logo_style": logo
-                    })
-    return generated_badges
-
-def optimize_svgs():
-    """Runs SVGO via pnpm to minify the generated SVGs."""
-    print("⚡ Optimizing SVGs with SVGO...")
-    try:
-        subprocess.run(["pnpm", "exec", "svgo", "-f", OUTPUT_DIR], check=True)
-        print("✅ SVGO Optimization complete.")
-    except subprocess.CalledProcessError:
-        print("❌ SVGO failed. Is it installed? Run: pnpm add -D svgo")
-    except FileNotFoundError:
-        print("❌ pnpm not found. Please ensure Node and pnpm are installed.")
-
-def generate_catalog(env, badges):
-    """Generates the index.html documentation page."""
-    print("📝 Generating HTML Catalog...")
-    html_template = env.get_template('catalog_template.html')
-    rendered_html = html_template.render(badges=badges)
+def render_svg(project, score, logo_style, theme, custom_color=None):
+    """Renders a single SVG and saves it based on the schema."""
+    template = env.get_template('badge_template.svg')
     
-    with open(os.path.join(OUTPUT_DIR, 'index.html'), 'w') as f:
-        f.write(rendered_html)
-    print("✅ Catalog generated at badges/index.html")
+    theme_colors = config["theme_data"].get(theme, config["theme_data"]["dark"])
+    if custom_color:
+        accent = custom_color
+    else:
+        project_data = config["batch_matrices"]["projects"].get(project, {"color": "#00babc", "threshold": 50})
+        accent = "#E74C3C" if int(score) < project_data.get("threshold", 50) else project_data["color"]
+
+    clean_name = project.replace(' ', '_').lower()
+    filename = f"{clean_name}--{score}--{logo_style}--{theme}.svg"
+    
+    rendered = template.render(
+        project_name=project, score=score, logo_style=logo_style,
+        bg_color=theme_colors["bg_color"], text_color=theme_colors["text_color"], accent_color=accent
+    )
+    
+    with open(os.path.join(OUTPUT_DIR, filename), 'w') as f:
+        f.write(rendered)
+    return filename
+
+def run_batch():
+    """Generates the locked matrix of images from config.json."""
+    matrices = config["batch_matrices"]
+    
+    for project in matrices["projects"]:
+        for score in matrices["scores"]:
+            for logo in matrices["logo_styles"]:
+                for theme in matrices["themes"]:
+                    render_svg(project, score, logo, theme)
+    
+    subprocess.run(["pnpm", "exec", "svgo", "-f", OUTPUT_DIR], check=True, stdout=subprocess.DEVNULL)
+
+def setup_cli():
+    parser = argparse.ArgumentParser(description="42 Badge Generator CLI")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    subparsers.add_parser("batch", help="Generate all standard badges from config.json")
+
+    single_parser = subparsers.add_parser("single", help="Generate a custom badge with arbitrary values")
+    single_parser.add_argument("--project", required=True, help="Any project name (e.g., 'My Custom C++')")
+    single_parser.add_argument("--score", required=True, help="Any score (e.g., 'OVER 9000')")
+    single_parser.add_argument("--logo", choices=["text", "logo"], default="text")
+    single_parser.add_argument("--theme", choices=["dark", "light"], default="dark")
+    single_parser.add_argument("--color", help="Force a specific HEX accent color (e.g., '#ff00ff')")
+
+    args = parser.parse_args()
+
+    if args.command == "batch":
+        run_batch()
+    elif args.command == "single":
+        filename = render_svg(args.project, args.score, args.logo, args.theme, args.color)
 
 if __name__ == "__main__":
-    jinja_env = setup_env()
-    badges_metadata = generate_svgs(jinja_env)
-    optimize_svgs()
-    generate_catalog(jinja_env, badges_metadata)
-    print("\n🎉 Build complete! Open badges/index.html in your browser.")
+    setup_cli()

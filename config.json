@@ -1,0 +1,16 @@
+{
+  "schema": ["project", "score", "logo_style", "theme"],
+  "theme_data": {
+    "dark": {"bg_color": "#121418", "text_color": "#ffffff"},
+    "light": {"bg_color": "#f0f6fc", "text_color": "#24292f"}
+  },
+  "batch_matrices": {
+    "projects": {
+      "libft": {"color": "#00babc", "threshold": 50},
+      "minishell": {"color": "#00babc", "threshold": 75}
+    },
+    "scores": [0, 50, 100, 125],
+    "logo_styles": ["text", "logo"],
+    "themes": ["dark", "light"]
+  }
+}
