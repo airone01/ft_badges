@@ -52,7 +52,10 @@
     <div class="grid">
       {% for badge in badges %}
       <div class="card">
-        <img src="{{ badge.filename }}" alt="{{ badge.project_name }} badge" />
+        <img
+          src="https://github.com/airone01/ft_badges/raw/refs/heads/main/badges/{{ badge.filename }}"
+          alt="{{ badge.project_name }} badge"
+        />
         <p>
           <strong>{{ badge.project_name }}</strong> (Score: {{ badge.score
           }})<br />
