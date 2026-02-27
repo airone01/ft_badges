@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>42 Badges Catalog</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #0d1117;
+        color: #c9d1d9;
+        padding: 2rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+      .card {
+        background: #161b22;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #30363d;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+      code {
+        display: block;
+        background: #010409;
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        word-wrap: break-word;
+        color: #58a6ff;
+      }
+      h1 {
+        border-bottom: 1px solid #30363d;
+        padding-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>42 Project Badges</h1>
+    <p>
+      Find your project, score, and preferred style. Copy the markdown below the
+      badge!
+    </p>
+
+    <div class="grid">
+      {% for badge in badges %}
+      <div class="card">
+        <img src="{{ badge.filename }}" alt="{{ badge.project_name }} badge" />
+        <p>
+          <strong>{{ badge.project_name }}</strong> (Score: {{ badge.score
+          }})<br />
+          <small>{{ badge.theme }} | {{ badge.logo_style }}</small>
+        </p>
+        <code
+          >![{{ badge.project_name }}](https://your-repo-url.com/badges/{{
+          badge.filename }})</code
+        >
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
