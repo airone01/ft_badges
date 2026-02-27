@@ -78,7 +78,8 @@
     <div id="markdown-output"></div>
 
     <script>
-      const BASE_URL = "https://airone01.github.io/ft_badges";
+      const BASE_URL =
+        "https://github.com/airone01/ft_badges/raw/refs/heads/main/badges";
 
       function updateBadge() {
         const project = document.getElementById("sel-project").value;
@@ -89,7 +90,7 @@
         const filename = `${project}--${score}--${logo}--${theme}.svg`;
         const fullPath = `${BASE_URL}/${filename}`;
 
-        document.getElementById("badge-preview").src = filename;
+        document.getElementById("badge-preview").src = fullPath;
 
         const markdown = `![${project} Badge](${fullPath})`;
         document.getElementById("markdown-output").textContent = markdown;
