@@ -1,5 +1,5 @@
 {
-  "schema": ["project", "score", "logo_style", "theme"],
+  "schema": ["project", "score", "logo_style", "theme", "variant"],
   "theme_data": {
     "dark": {"bg_color": "#121418", "text_color": "#ffffff"},
     "light": {"bg_color": "#f0f6fc", "text_color": "#24292f"}
@@ -11,6 +11,7 @@
     },
     "scores": [0, 50, 100, 125],
     "logo_styles": ["text", "logo"],
-    "themes": ["dark", "light"]
+    "themes": ["dark", "light"],
+    "variants": ["classic", "noisy"]
   }
 }

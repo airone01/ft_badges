@@ -12,7 +12,7 @@ OUTPUT_DIR = "badges"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 env = Environment(loader=FileSystemLoader('.'))
 
-def render_svg(project, score, logo_style, theme, custom_color=None):
+def render_svg(project, score, logo_style, theme, variant, custom_color=None):
     """Renders a single SVG and returns its metadata dictionary."""
     template = env.get_template('badge_template.svg')
     
@@ -24,11 +24,12 @@ def render_svg(project, score, logo_style, theme, custom_color=None):
         accent = "#E74C3C" if int(score) < project_data.get("threshold", 50) else project_data["color"]
 
     clean_name = project.replace(' ', '_').lower()
-    filename = f"{clean_name}--{score}--{logo_style}--{theme}.svg"
+    filename = f"{clean_name}--{score}--{logo_style}--{theme}--{variant}.svg"
     
     rendered = template.render(
         project_name=project, score=score, logo_style=logo_style,
-        bg_color=theme_colors["bg_color"], text_color=theme_colors["text_color"], accent_color=accent
+        bg_color=theme_colors["bg_color"], text_color=theme_colors["text_color"], 
+        accent_color=accent, variant=variant
     )
 
     with open(os.path.join(OUTPUT_DIR, filename), 'w') as f:
@@ -51,9 +52,9 @@ def run_batch():
         for score in matrices["scores"]:
             for logo in matrices["logo_styles"]:
                 for theme in matrices["themes"]:
-                    # Collect metadata as we generate
-                    badge_meta = render_svg(project, score, logo, theme)
-                    generated_badges.append(badge_meta)
+                    for variant in matrices["variants"]:
+                        badge_meta = render_svg(project, score, logo, theme, variant)
+                        generated_badges.append(badge_meta)
 
     try:
         subprocess.run(["pnpm", "exec", "svgo", "-f", OUTPUT_DIR], check=True, stdout=subprocess.DEVNULL)
@@ -72,6 +73,7 @@ def setup_cli():
     single_parser.add_argument("--logo", choices=["text", "logo"], default="text")
     single_parser.add_argument("--theme", choices=["dark", "light"], default="dark")
     single_parser.add_argument("--color", help="Force a specific HEX accent color (e.g., '#ff00ff')")
+    single_parser.add_argument("--variant", choices=["classic", "noisy"], default="double")
 
     args = parser.parse_args()
 
