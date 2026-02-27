@@ -13,7 +13,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 env = Environment(loader=FileSystemLoader('.'))
 
 def render_svg(project, score, logo_style, theme, custom_color=None):
-    """Renders a single SVG and saves it based on the schema."""
+    """Renders a single SVG and returns its metadata dictionary."""
     template = env.get_template('badge_template.svg')
     
     theme_colors = config["theme_data"].get(theme, config["theme_data"]["dark"])
@@ -30,22 +30,45 @@ def render_svg(project, score, logo_style, theme, custom_color=None):
         project_name=project, score=score, logo_style=logo_style,
         bg_color=theme_colors["bg_color"], text_color=theme_colors["text_color"], accent_color=accent
     )
-    
+
     with open(os.path.join(OUTPUT_DIR, filename), 'w') as f:
         f.write(rendered)
-    return filename
+
+    return {
+        "filename": filename,
+        "project_name": project,
+        "score": score,
+        "theme": theme,
+        "logo_style": logo_style
+    }
+
+def generate_catalog(badges_metadata):
+    """Generates the index.html documentation page at the root of the repo."""
+    html_template = env.get_template('catalog_template.html')
+    rendered_html = html_template.render(badges=badges_metadata)
+
+    with open('index.html', 'w') as f:
+        f.write(rendered_html)
 
 def run_batch():
-    """Generates the locked matrix of images from config.json."""
+    """Generates the locked matrix of images and builds the catalog."""
     matrices = config["batch_matrices"]
-    
+    generated_badges = []
+
     for project in matrices["projects"]:
         for score in matrices["scores"]:
             for logo in matrices["logo_styles"]:
                 for theme in matrices["themes"]:
-                    render_svg(project, score, logo, theme)
-    
-    subprocess.run(["pnpm", "exec", "svgo", "-f", OUTPUT_DIR], check=True, stdout=subprocess.DEVNULL)
+                    # Collect metadata as we generate
+                    badge_meta = render_svg(project, score, logo, theme)
+                    generated_badges.append(badge_meta)
+
+    try:
+        subprocess.run(["pnpm", "exec", "svgo", "-f", OUTPUT_DIR], check=True, stdout=subprocess.DEVNULL)
+    except Exception as e:
+        print(f"SVGO skipped or failed: {e}")
+
+    generate_catalog(generated_badges)
 
 def setup_cli():
     parser = argparse.ArgumentParser(description="42 Badge Generator CLI")
