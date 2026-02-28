@@ -1,5 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><defs><filter id="a" width="140%" height="140%" x="-20%" y="-20%"><feDropShadow dx="0" dy="3" flood-color="#000" flood-opacity=".3" stdDeviation="3"/></filter></defs><rect width="200" height="200" fill="#121418" rx="20"/><rect width="176" height="176" x="12" y="12" fill="none" stroke="#e74c3c" stroke-width="2" opacity=".3" rx="12"/><text x="100" y="60" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" opacity=".5" text-anchor="middle">[ 42 ]</text><text x="100" y="104" fill="#fff" filter="url(#a)" font-family="sans-serif" font-size="26" font-weight="900" text-anchor="middle">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+
+    
+  </defs>
+
+  <rect width="200" height="200" rx="20" fill="#121418" />
+
+  
+    <rect x="12" y="12" width="176" height="176" rx="12" fill="none" stroke="#E74C3C" stroke-width="2" opacity="0.3" />
+  
+
+  
+    <text x="100" y="60" font-family="monospace" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0.5">[ 42 ]</text>
+  
+  
+  <text x="100" y="104" font-family="sans-serif" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle" filter="url(#shadow)">
     
       <tspan x="100" dy="11">Libft</tspan>
     
-  </text><text x="100" y="150" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold" letter-spacing="2" opacity=".6" text-anchor="middle">SCORE</text><text x="100" y="172" fill="#e74c3c" filter="url(#a)" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">0</text></svg>
+  </text>
+  <text x="100" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0.6" letter-spacing="2">SCORE</text>
+  <text x="100" y="172" font-family="monospace" font-size="22" font-weight="bold" fill="#E74C3C" text-anchor="middle" filter="url(#shadow)">0</text>
+</svg>

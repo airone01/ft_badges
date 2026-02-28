@@ -34,6 +34,10 @@
         "color": "#00babc",
         "threshold": 50
       },
+      "push_swap": {
+        "color": "#00babc",
+        "threshold": 50
+      },
       "minishell": {
         "color": "#00babc",
         "threshold": 50
