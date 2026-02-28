@@ -71,7 +71,14 @@
     <text x="100" y="60" font-family="monospace" font-size="20" font-weight="bold" fill="{{ text_color }}" text-anchor="middle" opacity="0.5">[ 42 ]</text>
   {% endif %}
   
-  <text x="100" y="115" font-family="sans-serif" font-size="26" font-weight="900" fill="{{ text_color }}" text-anchor="middle" filter="url(#shadow)">{{ project_name }}</text>
+  <text x="100" y="104" font-family="sans-serif" font-size="{{ name_data.font_size }}" font-weight="900" fill="{{ text_color }}" text-anchor="middle" filter="url(#shadow)">
+    {% if name_data.is_multiline %}
+      <tspan x="100" dy="0">{{ name_data.line1 }}</tspan>
+      <tspan x="100" dy="22">{{ name_data.line2 }}</tspan>
+    {% else %}
+      <tspan x="100" dy="11">{{ name_data.line1 }}</tspan>
+    {% endif %}
+  </text>
   <text x="100" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="{{ text_color }}" text-anchor="middle" opacity="0.6" letter-spacing="2">SCORE</text>
   <text x="100" y="172" font-family="monospace" font-size="22" font-weight="bold" fill="{{ accent_color }}" text-anchor="middle" filter="url(#shadow)">{{ score }}</text>
 </svg>
