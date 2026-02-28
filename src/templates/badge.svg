@@ -21,29 +21,39 @@
     </filter>
 
     <filter id="noiseOverlay" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
-      
       <feTurbulence type="fractalNoise" baseFrequency="0.51" numOctaves="3" stitchTiles="stitch" result="noise" />
-      
       <feColorMatrix type="matrix" values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 1 0" in="noise" result="grayNoise" />
-      
       <feComponentTransfer in="grayNoise" result="contrastyNoise">
         <feFuncR type="linear" slope="4" intercept="-1.5" />
         <feFuncG type="linear" slope="4" intercept="-1.5" />
         <feFuncB type="linear" slope="4" intercept="-1.5" />
         <feFuncA type="linear" slope="0.9" /> 
       </feComponentTransfer>
-      
       <feBlend mode="overlay" in="contrastyNoise" in2="SourceGraphic" />
     </filter>
 
+    <!-- mask shape -->
     <mask id="ring-mask">
       <rect width="200" height="200" fill="black" />
-      <rect x="12" y="12" width="176" height="176" rx="12" fill="none" stroke="white" stroke-width="8" />
+      {% if shape == 'round' %}
+        <circle cx="100" cy="100" r="88" fill="none" stroke="white" stroke-width="8" />
+      {% elif shape == 'pentagon' %}
+        <polygon points="100,18 182,80 150,182 50,182 18,80" fill="none" stroke="white" stroke-width="8" stroke-linejoin="round" />
+      {% elif shape == 'square' %}
+        <rect x="12" y="12" width="176" height="176" rx="12" fill="none" stroke="white" stroke-width="8" />
+      {% endif %}
     </mask>
     {% endif %}
   </defs>
 
-  <rect width="200" height="200" rx="20" fill="{{ bg_color }}" />
+  <!-- background shape -->
+  {% if shape == 'round' %}
+    <circle cx="100" cy="100" r="100" fill="{{ bg_color }}" />
+  {% elif shape == 'pentagon' %}
+    <polygon points="100,4 196,74 160,192 40,192 4,74" fill="{{ bg_color }}" stroke="{{ bg_color }}" stroke-width="8" stroke-linejoin="round" />
+  {% elif shape == 'square' %}
+    <rect width="200" height="200" rx="20" fill="{{ bg_color }}" />
+  {% endif %}
 
   {% if variant == 'noisy' %}
     <g mask="url(#ring-mask)">
@@ -60,7 +70,13 @@
       </svg>
     </g>
   {% elif variant == 'classic' %}
-    <rect x="12" y="12" width="176" height="176" rx="12" fill="none" stroke="{{ accent_color }}" stroke-width="2" opacity="0.3" />
+    {% if shape == 'round' %}
+      <circle cx="100" cy="100" r="88" fill="none" stroke="{{ accent_color }}" stroke-width="2" opacity="0.3" />
+    {% elif shape == 'pentagon' %}
+      <polygon points="100,18 182,80 150,182 50,182 18,80" fill="none" stroke="{{ accent_color }}" stroke-width="2" opacity="0.3" stroke-linejoin="round" />
+    {% elif shape == 'square' %}
+      <rect x="12" y="12" width="176" height="176" rx="12" fill="none" stroke="{{ accent_color }}" stroke-width="2" opacity="0.3" />
+    {% endif %}
   {% endif %}
 
   {% if logo_style == 'logo' %}

@@ -60,6 +60,7 @@ def format_project_name(name: str) -> dict:
 
 def render_svg(
     project: str,
+    shape: str,
     score: int | str,
     logo_style: str,
     theme: str,
@@ -94,13 +95,16 @@ def render_svg(
         accent = "#E74C3C" if int(score) < threshold else resolved_color
 
     clean_name: str = project.replace(" ", "_").lower()
-    filename: str = f"{clean_name}--{score}--{logo_style}--{theme}--{variant}.svg"
+    filename: str = (
+        f"{clean_name}--{shape}--{score}--{logo_style}--{theme}--{variant}.svg"
+    )
     grad1, grad2, grad3 = generate_project_gradient(project)
     name_data = format_project_name(project)
 
     raw_svg: str = template.render(
         project_name=project,
         name_data=name_data,
+        shape=shape,
         score=score,
         logo_style=logo_style,
         bg_color=theme_colors["bg_color"],
@@ -135,6 +139,7 @@ def render_svg(
     return {
         "filename": filename,
         "project_name": project,
+        "shape": shape,
         "score": score,
         "theme": theme,
         "logo_style": logo_style,

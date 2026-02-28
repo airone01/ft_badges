@@ -3,6 +3,7 @@
   "img_origin_url": "https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges",
   "schema": [
     "project",
+    "shape",
     "score",
     "logo_style",
     "theme",
@@ -45,6 +46,11 @@
       "so_long": {},
       "webserv": {}
     },
+    "shapes": [
+      "square",
+      "round",
+      "pentagon"
+    ],
     "scores": [
       0,
       50,

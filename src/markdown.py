@@ -51,7 +51,12 @@ def generate_markdown(badges_metadata: list[BadgeMeta]) -> None:
 
                 score_badges = scores_dict[score]
                 score_badges.sort(
-                    key=lambda b: (b["theme"], b["variant"], b["logo_style"])
+                    key=lambda b: (
+                        b["theme"],
+                        b["shape"],
+                        b["variant"],
+                        b["logo_style"],
+                    )
                 )
 
                 for badge in score_badges:
@@ -59,7 +64,7 @@ def generate_markdown(badges_metadata: list[BadgeMeta]) -> None:
                     md_snippet: str = f"![{project_name} Badge]({img_url})"
 
                     _ = f.write(
-                        f"<h4>{badge['theme'].title()} Theme | {badge['variant'].title()} Variant | {badge['logo_style'].title()} Style</h4><br>"
+                        f"<h4>{badge['shape'].title()} | {badge['theme'].title()} Theme | {badge['variant'].title()} Variant | {badge['logo_style'].title()} Style</h4><br>"
                     )
                     _ = f.write(
                         f'<img src="{img_url}" width="200" alt="{project_name} badge">\n\n'

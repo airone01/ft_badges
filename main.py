@@ -13,19 +13,22 @@ def run_batch() -> list[BadgeMeta]:
     generated_badges: list[BadgeMeta] = []
 
     for project in matrices["projects"]:
-        for score in matrices["scores"]:
-            for logo in matrices["logo_styles"]:
-                for theme in matrices["themes"]:
-                    for variant in matrices["variants"]:
-                        badge_meta = render_svg(project, score, logo, theme, variant)
-                        generated_badges.append(badge_meta)
+        for shape in matrices["shapes"]:
+            for score in matrices["scores"]:
+                for logo in matrices["logo_styles"]:
+                    for theme in matrices["themes"]:
+                        for variant in matrices["variants"]:
+                            badge_meta = render_svg(
+                                project, shape, score, logo, theme, variant
+                            )
+                            generated_badges.append(badge_meta)
 
     return generated_badges
 
 
 def validate_single_args(args: argparse.Namespace) -> None:
     """Ensures all standard flags are present when not running in batch mode."""
-    required = ["project", "score", "logo", "theme", "variant"]
+    required = ["project", "shape", "score", "logo", "theme", "variant"]
     missing = [req for req in required if not getattr(args, req)]
     if missing:
         print(
@@ -52,6 +55,9 @@ def setup_cli() -> None:
         )
 
         _ = cmd_parser.add_argument("--project", help="Project name (e.g., 'libft')")
+        _ = cmd_parser.add_argument(
+            "--shape", choices=["square", "round", "pentagon"], help="Badge shape"
+        )
         _ = cmd_parser.add_argument("--score", help="Score value (e.g., '125')")
         _ = cmd_parser.add_argument(
             "--logo", choices=["text", "logo"], help="Logo style"
@@ -92,7 +98,7 @@ def setup_cli() -> None:
         else:
             validate_single_args(args)
             clean_name = args.project.replace(" ", "_").lower()
-            filename = f"{clean_name}--{args.score}--{args.logo}--{args.theme}--{args.variant}.svg"
+            filename = f"{clean_name}--{args.shape}--{args.score}--{args.logo}--{args.theme}--{args.variant}.svg"
             img_url = f"{APP_CONFIG['img_origin_url']}/{filename}"
             print(f"![{args.project} Badge]({img_url})")
 

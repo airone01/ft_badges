@@ -14,6 +14,7 @@ class ProjectData(TypedDict, total=False):
 
 class BatchMatrices(TypedDict):
     projects: dict[str, ProjectData]
+    shapes: list[str]
     scores: list[int]
     logo_styles: list[str]
     themes: list[str]
@@ -31,6 +32,7 @@ class ConfigData(TypedDict):
 class BadgeMeta(TypedDict):
     filename: str
     project_name: str
+    shape: str
     score: int | str
     theme: str
     logo_style: str
