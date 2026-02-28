@@ -89,6 +89,10 @@
       "Inception": {
         "color": "#00babc",
         "threshold": 50
+      },
+      "ft_transcendence": {
+        "color": "#00babc",
+        "threshold": 50
       }
     },
     "scores": [

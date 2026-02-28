@@ -20,6 +20,7 @@ nav:
     - fract-ol: projects/fract-ol.md
     - ft_irc: projects/ft_irc.md
     - ft_printf: projects/ft_printf.md
+    - ft_transcendence: projects/ft_transcendence.md
     - get_next_line: projects/get_next_line.md
     - Inception: projects/inception.md
     - Libft: projects/libft.md
