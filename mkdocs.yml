@@ -14,4 +14,5 @@ nav:
   - Home: index.md
   - Projects:
     - Libft: projects/libft.md
-    - Minishell: projects/minishell.md
+    - ft_printf: projects/ft_printf.md
+    - minishell: projects/minishell.md
