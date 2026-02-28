@@ -101,6 +101,5 @@ pip install -r requirements.txt
 ./main.py gen docs --batch
 ```
 
-> [!NOTE]
-> You can also pass `--config=my_config.json` to process a completely custom
-> batch matrix
+!!! info "Information:"
+    You can also pass `--config=my_config.json` to process a completely custom batch matrix

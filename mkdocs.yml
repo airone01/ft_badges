@@ -12,6 +12,7 @@ site_dir: docs
 markdown_extensions:
   - codehilite
   - md_in_html
+  - admonition
 
 nav:
   - Home: index.md
