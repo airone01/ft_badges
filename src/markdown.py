@@ -6,7 +6,7 @@ from src.config import APP_CONFIG
 
 def generate_markdown(badges_metadata: list[BadgeMeta]) -> None:
     """Generates grouped and collapsible Markdown files for MkDocs."""
-    os.makedirs("markdown_src/projects", exist_ok=True)
+    os.makedirs("docs_src/projects", exist_ok=True)
 
     projects_dict: defaultdict[str, list[BadgeMeta]] = defaultdict(list)
     for badge in badges_metadata:
@@ -14,7 +14,7 @@ def generate_markdown(badges_metadata: list[BadgeMeta]) -> None:
 
     for project_name, badges in projects_dict.items():
         clean_name: str = project_name.replace(" ", "_").lower()
-        filepath: str = f"markdown_src/projects/{clean_name}.md"
+        filepath: str = f"docs_src/projects/{clean_name}.md"
 
         # group badges by score
         scores_dict: defaultdict[int, list[BadgeMeta]] = defaultdict(list)

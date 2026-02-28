@@ -6,7 +6,7 @@ theme:
   name: shadcn
   icon: lucide:award
 
-docs_dir: markdown_src
+docs_dir: docs_src
 site_dir: docs
 
 markdown_extensions:
