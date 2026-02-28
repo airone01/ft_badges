@@ -16,6 +16,8 @@ def generate_markdown(badges_metadata: list[BadgeMeta]) -> None:
         clean_name: str = project_name.replace(" ", "_").lower()
         filepath: str = f"markdown_src/projects/{clean_name}.md"
 
+        badges.sort(key=lambda b: int(b["score"]), reverse=True)
+
         with open(filepath, "w") as f:
             _ = f.write("---\n")
             _ = f.write(f"title: {project_name}\n")
