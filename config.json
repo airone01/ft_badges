@@ -77,6 +77,18 @@
       "minishell": {
         "color": "#00babc",
         "threshold": 50
+      },
+      "ft_irc": {
+        "color": "#00babc",
+        "threshold": 50
+      },
+      "webserv": {
+        "color": "#00babc",
+        "threshold": 50
+      },
+      "Inception": {
+        "color": "#00babc",
+        "threshold": 50
       }
     },
     "scores": [

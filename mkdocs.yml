@@ -18,8 +18,10 @@ nav:
     - cub3d: projects/cub3d.md
     - FdF: projects/fdf.md
     - fract-ol: projects/fract-ol.md
+    - ft_irc: projects/ft_irc.md
     - ft_printf: projects/ft_printf.md
     - get_next_line: projects/get_next_line.md
+    - Inception: projects/inception.md
     - Libft: projects/libft.md
     - miniRT: projects/minirt.md
     - minishell: projects/minishell.md
@@ -29,3 +31,4 @@ nav:
     - pipex: projects/pipex.md
     - push_swap: projects/push_swap.md
     - so_long: projects/so_long.md
+    - webserv: projects/webserv.md
