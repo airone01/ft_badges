@@ -67,7 +67,7 @@ def render_svg(
     custom_color: str | None = None,
 ) -> BadgeMeta:
     """Renders a single SVG, optimizes it with Scour, and returns its metadata."""
-    template = env.get_template("src/badge_template.svg")
+    template = env.get_template("src/templates/badge.svg")
 
     theme_colors: ThemeColors = APP_CONFIG["theme_data"].get(
         theme,
