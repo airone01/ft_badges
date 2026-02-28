@@ -26,5 +26,6 @@ nav:
     - fract-ol: projects/fract-ol.md
     - Philosophers: projects/philosophers.md
     - cub3d: projects/cub3d.md
-    - miniRT: projects/miniRT.md
+    - miniRT: projects/minirt.md
+    - NetPractice: projects/netpractice.md
     - minishell: projects/minishell.md
