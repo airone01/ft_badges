@@ -2,325 +2,227 @@
 title: NetPractice
 ---
 
-Copy the markdown snippet below your favorite badge to use it in your README.
+# NetPractice Badges
 
-### Score: 125 | Dark | Classic
+Expand your score below to find the perfect badge style, then copy the snippet.
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--dark--classic.svg" width="200" alt="NetPractice badge">
+## Score: 125
 
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--dark--classic.svg)
-```
+<details>
+<summary><b>View Badges for Score 125</b></summary>
 
----
-
-### Score: 125 | Dark | Noisy
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--dark--noisy.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--dark--noisy.svg)
-```
-
----
-
-### Score: 125 | Light | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--light--classic.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--light--classic.svg)
-```
-
----
-
-### Score: 125 | Light | Noisy
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--light--noisy.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--light--noisy.svg)
-```
-
----
-
-### Score: 125 | Dark | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--dark--classic.svg" width="200" alt="NetPractice badge">
+<h4>Dark Theme | Classic Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--dark--classic.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--dark--classic.svg)
 ```
 
----
+<h4>Dark Theme | Classic Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--dark--classic.svg" width="200" alt="NetPractice badge">
 
-### Score: 125 | Dark | Noisy
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--dark--classic.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--dark--noisy.svg" width="200" alt="NetPractice badge">
+<h4>Dark Theme | Noisy Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--dark--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--dark--noisy.svg)
 ```
 
----
+<h4>Dark Theme | Noisy Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--dark--noisy.svg" width="200" alt="NetPractice badge">
 
-### Score: 125 | Light | Classic
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--dark--noisy.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--light--classic.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Classic Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--light--classic.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--light--classic.svg)
 ```
 
----
+<h4>Light Theme | Classic Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--light--classic.svg" width="200" alt="NetPractice badge">
 
-### Score: 125 | Light | Noisy
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--light--classic.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--light--noisy.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Noisy Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--light--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--logo--light--noisy.svg)
 ```
 
----
-
-### Score: 100 | Dark | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--dark--classic.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Noisy Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--light--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--dark--classic.svg)
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--125--text--light--noisy.svg)
 ```
 
----
+</details>
 
-### Score: 100 | Dark | Noisy
+## Score: 100
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--dark--noisy.svg" width="200" alt="NetPractice badge">
+<details>
+<summary><b>View Badges for Score 100</b></summary>
 
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--dark--noisy.svg)
-```
-
----
-
-### Score: 100 | Light | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--light--classic.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--light--classic.svg)
-```
-
----
-
-### Score: 100 | Light | Noisy
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--light--noisy.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--light--noisy.svg)
-```
-
----
-
-### Score: 100 | Dark | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--dark--classic.svg" width="200" alt="NetPractice badge">
+<h4>Dark Theme | Classic Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--dark--classic.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--dark--classic.svg)
 ```
 
----
+<h4>Dark Theme | Classic Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--dark--classic.svg" width="200" alt="NetPractice badge">
 
-### Score: 100 | Dark | Noisy
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--dark--classic.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--dark--noisy.svg" width="200" alt="NetPractice badge">
+<h4>Dark Theme | Noisy Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--dark--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--dark--noisy.svg)
 ```
 
----
+<h4>Dark Theme | Noisy Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--dark--noisy.svg" width="200" alt="NetPractice badge">
 
-### Score: 100 | Light | Classic
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--dark--noisy.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--light--classic.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Classic Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--light--classic.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--light--classic.svg)
 ```
 
----
+<h4>Light Theme | Classic Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--light--classic.svg" width="200" alt="NetPractice badge">
 
-### Score: 100 | Light | Noisy
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--light--classic.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--light--noisy.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Noisy Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--light--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--logo--light--noisy.svg)
 ```
 
----
-
-### Score: 50 | Dark | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--dark--classic.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Noisy Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--light--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--dark--classic.svg)
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--100--text--light--noisy.svg)
 ```
 
----
+</details>
 
-### Score: 50 | Dark | Noisy
+## Score: 50
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--dark--noisy.svg" width="200" alt="NetPractice badge">
+<details>
+<summary><b>View Badges for Score 50</b></summary>
 
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--dark--noisy.svg)
-```
-
----
-
-### Score: 50 | Light | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--light--classic.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--light--classic.svg)
-```
-
----
-
-### Score: 50 | Light | Noisy
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--light--noisy.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--light--noisy.svg)
-```
-
----
-
-### Score: 50 | Dark | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--dark--classic.svg" width="200" alt="NetPractice badge">
+<h4>Dark Theme | Classic Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--dark--classic.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--dark--classic.svg)
 ```
 
----
+<h4>Dark Theme | Classic Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--dark--classic.svg" width="200" alt="NetPractice badge">
 
-### Score: 50 | Dark | Noisy
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--dark--classic.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--dark--noisy.svg" width="200" alt="NetPractice badge">
+<h4>Dark Theme | Noisy Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--dark--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--dark--noisy.svg)
 ```
 
----
+<h4>Dark Theme | Noisy Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--dark--noisy.svg" width="200" alt="NetPractice badge">
 
-### Score: 50 | Light | Classic
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--dark--noisy.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--light--classic.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Classic Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--light--classic.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--light--classic.svg)
 ```
 
----
+<h4>Light Theme | Classic Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--light--classic.svg" width="200" alt="NetPractice badge">
 
-### Score: 50 | Light | Noisy
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--light--classic.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--light--noisy.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Noisy Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--light--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--logo--light--noisy.svg)
 ```
 
----
-
-### Score: 0 | Dark | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--dark--classic.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Noisy Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--light--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--dark--classic.svg)
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--50--text--light--noisy.svg)
 ```
 
----
+</details>
 
-### Score: 0 | Dark | Noisy
+## Score: 0
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--dark--noisy.svg" width="200" alt="NetPractice badge">
+<details>
+<summary><b>View Badges for Score 0</b></summary>
 
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--dark--noisy.svg)
-```
-
----
-
-### Score: 0 | Light | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--light--classic.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--light--classic.svg)
-```
-
----
-
-### Score: 0 | Light | Noisy
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--light--noisy.svg" width="200" alt="NetPractice badge">
-
-```markdown
-![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--light--noisy.svg)
-```
-
----
-
-### Score: 0 | Dark | Classic
-
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--dark--classic.svg" width="200" alt="NetPractice badge">
+<h4>Dark Theme | Classic Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--dark--classic.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--dark--classic.svg)
 ```
 
----
+<h4>Dark Theme | Classic Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--dark--classic.svg" width="200" alt="NetPractice badge">
 
-### Score: 0 | Dark | Noisy
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--dark--classic.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--dark--noisy.svg" width="200" alt="NetPractice badge">
+<h4>Dark Theme | Noisy Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--dark--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--dark--noisy.svg)
 ```
 
----
+<h4>Dark Theme | Noisy Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--dark--noisy.svg" width="200" alt="NetPractice badge">
 
-### Score: 0 | Light | Classic
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--dark--noisy.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--light--classic.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Classic Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--light--classic.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--light--classic.svg)
 ```
 
----
+<h4>Light Theme | Classic Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--light--classic.svg" width="200" alt="NetPractice badge">
 
-### Score: 0 | Light | Noisy
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--light--classic.svg)
+```
 
-<img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--light--noisy.svg" width="200" alt="NetPractice badge">
+<h4>Light Theme | Noisy Variant | Logo Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--light--noisy.svg" width="200" alt="NetPractice badge">
 
 ```markdown
 ![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--logo--light--noisy.svg)
 ```
 
----
+<h4>Light Theme | Noisy Variant | Text Style</h4><br><img src="https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--light--noisy.svg" width="200" alt="NetPractice badge">
+
+```markdown
+![NetPractice Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/netpractice--0--text--light--noisy.svg)
+```
+
+</details>
 
