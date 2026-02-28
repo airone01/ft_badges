@@ -42,6 +42,10 @@
         "color": "#00babc",
         "threshold": 50
       },
+      "minitalk": {
+        "color": "#00babc",
+        "threshold": 50
+      },
       "minishell": {
         "color": "#00babc",
         "threshold": 50
