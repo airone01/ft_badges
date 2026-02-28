@@ -2,7 +2,7 @@ import os
 import hashlib
 import colorsys
 from jinja2 import Environment, FileSystemLoader
-from scour.scour import scourString, sanitizeOptions
+from scour.scour import scourString, parse_args
 from src.types import BadgeMeta, ThemeColors, ProjectData
 from src.config import APP_CONFIG, OUTPUT_DIR
 
@@ -105,20 +105,20 @@ def render_svg(
         grad3=grad3,
     )
 
-    scour_options = sanitizeOptions(options=None)
-    scour_options.remove_metadata = True
-    scour_options.strip_comments = True
-    scour_options.shorten_ids = True
-    scour_options.indent_type = "none"
-    scour_options.strip_xml_prolog = True
-    scour_options.strip_xml_space = True
-    scour_options.no_line_breaks = True
-    scour_options.enable_viewboxing = True
-    scour_options.enable_comment_stripping = True
-    scour_options.create_groups = True
-    scour_options.remove_titles = True
-    scour_options.remove_descriptions = True
-    scour_options.remove_metadata = True
+    scour_options = parse_args(
+        [
+            "--enable-comment-stripping",
+            "--shorten-ids",
+            "--enable-id-stripping",
+            "--indent=none",
+            "--strip-xml-prolog",
+            "--strip-xml-space",
+            "--no-line-breaks",
+            "--enable-viewboxing",
+            "--remove-descriptive-elements",
+            "--create-groups",
+        ]
+    )
 
     optimized_svg: str = scourString(raw_svg, options=scour_options)
 

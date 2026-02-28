@@ -20,15 +20,6 @@ def run_batch(gen_md: bool) -> None:
                         badge_meta = render_svg(project, score, logo, theme, variant)
                         generated_badges.append(badge_meta)
 
-    try:
-        _ = subprocess.run(
-            ["pnpm", "exec", "svgo", "-f", OUTPUT_DIR],
-            check=True,
-            stdout=subprocess.DEVNULL,
-        )
-    except Exception as e:
-        print(f"SVGO skipped or failed: {e}")
-
     if gen_md:
         generate_markdown(generated_badges)
 
