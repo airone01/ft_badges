@@ -41,7 +41,9 @@ def generate_markdown(badges_metadata: list[BadgeMeta]) -> None:
             )
 
             for score in sorted_scores:
-                _ = f.write(f"## Score: {score}\n\n")
+                _ = f.write(
+                    f'<p style="font-size: 1.6em; font-weight: 500; margin-top: 1.6em; margin-bottom: 0.6em;">Score: {score}</p>\n\n'
+                )
                 _ = f.write("<details>\n")
                 _ = f.write(
                     f"<summary><b>View Badges for Score {score}</b></summary>\n\n"

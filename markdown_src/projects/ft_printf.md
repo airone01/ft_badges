@@ -6,7 +6,7 @@ title: ft_printf
 
 Expand your score below to find the perfect badge style, then copy the snippet.
 
-## Score: 125
+<p style="font-size: 1.6em; font-weight: 500; margin-top: 1.6em; margin-bottom: 0.6em;">Score: 125</p>
 
 <details>
 <summary><b>View Badges for Score 125</b></summary>
@@ -61,7 +61,7 @@ Expand your score below to find the perfect badge style, then copy the snippet.
 
 </details>
 
-## Score: 100
+<p style="font-size: 1.6em; font-weight: 500; margin-top: 1.6em; margin-bottom: 0.6em;">Score: 100</p>
 
 <details>
 <summary><b>View Badges for Score 100</b></summary>
@@ -116,7 +116,7 @@ Expand your score below to find the perfect badge style, then copy the snippet.
 
 </details>
 
-## Score: 50
+<p style="font-size: 1.6em; font-weight: 500; margin-top: 1.6em; margin-bottom: 0.6em;">Score: 50</p>
 
 <details>
 <summary><b>View Badges for Score 50</b></summary>
@@ -171,7 +171,7 @@ Expand your score below to find the perfect badge style, then copy the snippet.
 
 </details>
 
-## Score: 0
+<p style="font-size: 1.6em; font-weight: 500; margin-top: 1.6em; margin-bottom: 0.6em;">Score: 0</p>
 
 <details>
 <summary><b>View Badges for Score 0</b></summary>
