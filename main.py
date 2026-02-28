@@ -22,7 +22,7 @@ env = Environment(loader=FileSystemLoader("."))
 
 
 def generate_markdown(badges_metadata):
-    """Generates MkDocs-compatible Markdown files with category frontmatter."""
+    """Generates MkDocs-compatible Markdown files with frontmatter."""
     os.makedirs("markdown_src/projects", exist_ok=True)
 
     projects_dict = defaultdict(list)
@@ -43,7 +43,7 @@ def generate_markdown(badges_metadata):
             )
 
             for badge in badges:
-                img_url = f"{IMG_ORIGIN_URL}/badges/{badge['filename']}"
+                img_url = f"{IMG_ORIGIN_URL}/{badge['filename']}"
                 md_snippet = f"![{project_name} Badge]({img_url})"
 
                 f.write(
