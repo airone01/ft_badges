@@ -20,6 +20,8 @@ class BatchMatrices(TypedDict):
 
 
 class ConfigData(TypedDict):
+    site_url: str
+    img_origin_url: str
     schema: list[str]
     theme_data: dict[str, ThemeColors]
     batch_matrices: BatchMatrices

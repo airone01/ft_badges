@@ -1,4 +1,6 @@
 {
+  "site_url": "https://airone01.github.io/ft_badges",
+  "img_origin_url": "https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges",
   "schema": [
     "project",
     "score",

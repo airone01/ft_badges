@@ -1,7 +1,7 @@
 import os
 from collections import defaultdict
 from src.types import BadgeMeta
-from src.config import IMG_ORIGIN_URL
+from src.config import APP_CONFIG
 
 
 def generate_markdown(badges_metadata: list[BadgeMeta]) -> None:
@@ -55,7 +55,7 @@ def generate_markdown(badges_metadata: list[BadgeMeta]) -> None:
                 )
 
                 for badge in score_badges:
-                    img_url: str = f"{IMG_ORIGIN_URL}/{badge['filename']}"
+                    img_url: str = f"{APP_CONFIG['img_origin_url']}/{badge['filename']}"
                     md_snippet: str = f"![{project_name} Badge]({img_url})"
 
                     _ = f.write(

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 import argparse
-import subprocess
-from src.config import APP_CONFIG, OUTPUT_DIR
+import sys
+from src.config import APP_CONFIG, load_config
 from src.types import BatchMatrices, BadgeMeta
 from src.renderer import render_svg
 from src.markdown import generate_markdown
 
 
-def run_batch(gen_md: bool) -> None:
-    """Generates the locked matrix of images and builds the catalog."""
+def run_batch() -> list[BadgeMeta]:
+    """Generates the locked matrix of images and returns their metadata."""
     matrices: BatchMatrices = APP_CONFIG["batch_matrices"]
     generated_badges: list[BadgeMeta] = []
 
@@ -20,52 +20,81 @@ def run_batch(gen_md: bool) -> None:
                         badge_meta = render_svg(project, score, logo, theme, variant)
                         generated_badges.append(badge_meta)
 
-    if gen_md:
-        generate_markdown(generated_badges)
+    return generated_badges
+
+
+def validate_single_args(args: argparse.Namespace) -> None:
+    """Ensures all standard flags are present when not running in batch mode."""
+    required = ["project", "score", "logo", "theme", "variant"]
+    missing = [req for req in required if not getattr(args, req)]
+    if missing:
+        print(
+            f"Error: The following arguments are required when not using --batch: {', '.join(missing)}"
+        )
+        sys.exit(1)
 
 
 def setup_cli() -> None:
-    parser = argparse.ArgumentParser(description="ft_badges generator cli")
+    parser = argparse.ArgumentParser(description="ft_badges generator CLI")
+
     subparsers = parser.add_subparsers(dest="command", required=True)
+    gen_parser = subparsers.add_parser("gen", help="Generate badges or markdown")
 
-    batch_parser = subparsers.add_parser(
-        "batch", help="Generate all standard badges from config.json"
-    )
-    _ = batch_parser.add_argument(
-        "--md", action="store_true", help="Generate the initial markdown for MkDocs"
-    )
+    gen_subparsers = gen_parser.add_subparsers(dest="subcommand", required=True)
 
-    single_parser = subparsers.add_parser(
-        "single", help="Generate a custom badge with arbitrary values"
-    )
-    _ = single_parser.add_argument(
-        "--project", required=True, help="Any project name (e.g., 'My Custom C++')"
-    )
-    _ = single_parser.add_argument(
-        "--score", required=True, help="Any score (e.g., '112')"
-    )
-    _ = single_parser.add_argument("--logo", choices=["text", "logo"], default="text")
-    _ = single_parser.add_argument("--theme", choices=["dark", "light"], default="dark")
-    _ = single_parser.add_argument(
-        "--color", help="Force a specific HEX accent color (e.g., '#ff00ff')"
-    )
-    _ = single_parser.add_argument(
-        "--variant", choices=["classic", "noisy"], default="double"
-    )
+    for cmd_name in ["badge", "md"]:
+        cmd_parser = gen_subparsers.add_parser(cmd_name)
+        _ = cmd_parser.add_argument(
+            "--batch", action="store_true", help="Run batch generation from config"
+        )
+        _ = cmd_parser.add_argument(
+            "--config", default="config.json", help="Path to custom config file"
+        )
+
+        _ = cmd_parser.add_argument("--project", help="Project name (e.g., 'libft')")
+        _ = cmd_parser.add_argument("--score", help="Score value (e.g., '125')")
+        _ = cmd_parser.add_argument(
+            "--logo", choices=["text", "logo"], help="Logo style"
+        )
+        _ = cmd_parser.add_argument(
+            "--theme", choices=["dark", "light"], help="Color theme"
+        )
+        _ = cmd_parser.add_argument(
+            "--variant", choices=["classic", "noisy"], help="Background variant"
+        )
+        _ = cmd_parser.add_argument(
+            "--color", help="Force a specific HEX accent color (e.g., '#ff00ff')"
+        )
 
     args = parser.parse_args()
 
-    if args.command == "batch":
-        run_batch(args.md)
-    elif args.command == "single":
-        _ = render_svg(
-            args.project,
-            args.score,
-            args.logo,
-            args.theme,
-            args.variant,
-            args.color,
-        )
+    if args.config != "config.json":
+        APP_CONFIG.update(load_config(args.config))
+
+    if args.subcommand == "badge":
+        if args.batch:
+            run_batch()
+        else:
+            validate_single_args(args)
+            render_svg(
+                args.project,
+                args.score,
+                args.logo,
+                args.theme,
+                args.variant,
+                args.color,
+            )
+
+    elif args.subcommand == "md":
+        if args.batch:
+            badges = run_batch()
+            generate_markdown(badges)
+        else:
+            validate_single_args(args)
+            clean_name = args.project.replace(" ", "_").lower()
+            filename = f"{clean_name}--{args.score}--{args.logo}--{args.theme}--{args.variant}.svg"
+            img_url = f"{APP_CONFIG['img_origin_url']}/{filename}"
+            print(f"![{args.project} Badge]({img_url})")
 
 
 if __name__ == "__main__":
