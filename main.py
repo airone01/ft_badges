@@ -42,7 +42,7 @@ def setup_cli() -> None:
 
     gen_subparsers = gen_parser.add_subparsers(dest="subcommand", required=True)
 
-    for cmd_name in ["badge", "md"]:
+    for cmd_name in ["badge", "docs"]:
         cmd_parser = gen_subparsers.add_parser(cmd_name)
         _ = cmd_parser.add_argument(
             "--batch", action="store_true", help="Run batch generation from config"
@@ -85,7 +85,7 @@ def setup_cli() -> None:
                 args.color,
             )
 
-    elif args.subcommand == "md":
+    elif args.subcommand == "docs":
         if args.batch:
             badges = run_batch()
             generate_markdown(badges)
