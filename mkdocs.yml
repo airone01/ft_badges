@@ -15,4 +15,5 @@ nav:
   - Projects:
     - Libft: projects/libft.md
     - ft_printf: projects/ft_printf.md
+    - Bord2beroot: projects/born2beroot.md
     - minishell: projects/minishell.md
