@@ -103,5 +103,5 @@ unencumbered software released into the public domain.
 
 The '42' logo and branding are the intellectual property of 42 (association loi
 1901 "42"). This project is an independent student initiative and is not
-officially affiliated with, endorsed by, or sponsored by 42 School. Please don't
-sue me, I'm just a student.
+officially affiliated with, endorsed by, or sponsored by 42. Please don't sue
+me, I'm just a student.
