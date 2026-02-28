@@ -82,7 +82,14 @@ def generate_project_gradient(project_name):
     return colors
 
 
-def render_svg(project, score, logo_style, theme, variant, custom_color=None):
+def render_svg(
+    project: str,
+    score: int,
+    logo_style: str,
+    theme: str,
+    variant: str,
+    custom_color: str | None = None,
+):
     """Renders a single SVG and returns its metadata dictionary."""
     template = env.get_template("badge_template.svg")
 
@@ -129,7 +136,7 @@ def render_svg(project, score, logo_style, theme, variant, custom_color=None):
     }
 
 
-def run_batch():
+def run_batch(gen_md: bool):
     """Generates the locked matrix of images and builds the catalog."""
     matrices = config["batch_matrices"]
     generated_badges = []
@@ -151,40 +158,51 @@ def run_batch():
     except Exception as e:
         print(f"SVGO skipped or failed: {e}")
 
-    generate_markdown(generated_badges)
+    if gen_md:
+        generate_markdown(generated_badges)
 
 
 def setup_cli():
-    parser = argparse.ArgumentParser(description="ft_badges generator CLI")
+    parser = argparse.ArgumentParser(description="ft_badges generator cli")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    subparsers.add_parser("batch", help="Generate all standard badges from config.json")
+    batch_parser = subparsers.add_parser(
+        "batch", help="Generate all standard badges from config.json"
+    )
+    _ = batch_parser.add_argument(
+        "--md", help="Generate the initial markdown for MkDocs"
+    )
 
     single_parser = subparsers.add_parser(
         "single", help="Generate a custom badge with arbitrary values"
     )
-    single_parser.add_argument(
+    _ = single_parser.add_argument(
         "--project", required=True, help="Any project name (e.g., 'My Custom C++')"
     )
-    single_parser.add_argument(
-        "--score", required=True, help="Any score (e.g., 'OVER 9000')"
+    _ = single_parser.add_argument(
+        "--score", required=True, help="Any score (e.g., '112')"
     )
-    single_parser.add_argument("--logo", choices=["text", "logo"], default="text")
-    single_parser.add_argument("--theme", choices=["dark", "light"], default="dark")
-    single_parser.add_argument(
+    _ = single_parser.add_argument("--logo", choices=["text", "logo"], default="text")
+    _ = single_parser.add_argument("--theme", choices=["dark", "light"], default="dark")
+    _ = single_parser.add_argument(
         "--color", help="Force a specific HEX accent color (e.g., '#ff00ff')"
     )
-    single_parser.add_argument(
+    _ = single_parser.add_argument(
         "--variant", choices=["classic", "noisy"], default="double"
     )
 
     args = parser.parse_args()
 
     if args.command == "batch":
-        run_batch()
+        run_batch(args.md)
     elif args.command == "single":
-        filename = render_svg(
-            args.project, args.score, args.logo, args.theme, args.color
+        _ = render_svg(
+            args.project,
+            args.score,
+            args.logo,
+            args.theme,
+            args.variant,
+            args.color,
         )
 
 
