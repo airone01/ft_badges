@@ -21,4 +21,7 @@ nav:
     - push_swap: projects/push_swap.md
     - pipex: projects/pipex.md
     - minitalk: projects/minitalk.md
+    - so_long: projects/so_long.md
+    - FdF: projects/fdf.md
+    - fract-ol: projects/fract-ol.md
     - minishell: projects/minishell.md
