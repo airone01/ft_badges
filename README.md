@@ -12,7 +12,7 @@
 </h4>
 
 <p align="center">
-  <b>A dynamic, fully customizable SVG badge generator designed specifically for 42 School projects.</b><br>
+  <b>A dynamic, fully customizable SVG badge generator designed specifically for 42 projects.</b><br>
   Show off your perfect 125% scores and add some beautiful, optimized vector flair to your GitHub profile READMEs!
 </p>
 
@@ -26,10 +26,10 @@ projects and instantly copy the exact Markdown snippets needed for your README.
 
 ## Preview Styles
 
-| Classic / Light / Square                                                                                                                | Noisy / Dark / Pentagon                                                                                                                   |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
-| ![libft](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--square--125--logo--light--classic.svg)      | ![minishell](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/minishell--pentagon--125--logo--dark--noisy.svg) |
-| ![printf](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/ft_printf--square--100--text--light--classic.svg) | ![inception](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/inception--pentagon--125--text--dark--noisy.svg) |
+| Classic / Light / Square                                                                                                                   | Noisy / Dark / Pentagon                                                                                                                   |
+| :----------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| ![minishell](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/minishell--square--125--logo--light--classic.svg) | ![libft](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--pentagon--125--logo--dark--noisy.svg)         |
+| ![printf](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/ft_printf--square--100--text--light--classic.svg)    | ![inception](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/inception--pentagon--125--text--dark--noisy.svg) |
 
 ## Quick Start
 
