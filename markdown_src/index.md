@@ -1,5 +1,5 @@
 **ft_badges** is a dynamic, fully customizable SVG badge generator designed
-specifically for 42 School projects.
+specifically for [42](https://42.fr/en/homepage/) projects.
 
 Whether you want to show off your perfect 125% score or just add some visual
 flair to your GitHub profile, ft_badges generates clean, responsive, and

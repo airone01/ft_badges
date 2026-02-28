@@ -1,6 +1,7 @@
 site_name: ft_badges
-site_url: https://airone01.github.io/ft_badges/
-repo_url: https://airone01.github.io/ft_badges/
+site_url: https://airone01.github.io/ft_badges
+repo_url: https://github.com/airone01/ft_badges
+repo_name: airone01/ft_badges
 theme:
   name: shadcn
   icon: lucide:award
