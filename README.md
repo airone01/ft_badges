@@ -18,9 +18,8 @@
 
 ## Documentation & Badge Catalog
 
-**The easiest way to use ft_badges is to visit the documentation website!**
-
-**[ft_badges Documentation](https://airone01.github.io/ft_badges/)**
+**The easiest way to use ft_badges is to visit the
+[**documentation**](https://airone01.github.io/ft_badges/) website!**
 
 There, you can browse a visual catalog of all pre-generated badges for 42
 projects and instantly copy the exact Markdown snippets needed for your README.
