@@ -13,6 +13,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Usage Guide: usage.md
   - Projects:
     - Bord2beroot: projects/born2beroot.md
     - cub3d: projects/cub3d.md
