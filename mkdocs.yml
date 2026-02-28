@@ -14,18 +14,18 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Projects:
-    - Libft: projects/libft.md
-    - ft_printf: projects/ft_printf.md
     - Bord2beroot: projects/born2beroot.md
-    - get_next_line: projects/get_next_line.md
-    - push_swap: projects/push_swap.md
-    - pipex: projects/pipex.md
-    - minitalk: projects/minitalk.md
-    - so_long: projects/so_long.md
+    - cub3d: projects/cub3d.md
     - FdF: projects/fdf.md
     - fract-ol: projects/fract-ol.md
-    - Philosophers: projects/philosophers.md
-    - cub3d: projects/cub3d.md
+    - ft_printf: projects/ft_printf.md
+    - get_next_line: projects/get_next_line.md
+    - Libft: projects/libft.md
     - miniRT: projects/minirt.md
-    - NetPractice: projects/netpractice.md
     - minishell: projects/minishell.md
+    - minitalk: projects/minitalk.md
+    - NetPractice: projects/netpractice.md
+    - Philosophers: projects/philosophers.md
+    - pipex: projects/pipex.md
+    - push_swap: projects/push_swap.md
+    - so_long: projects/so_long.md
