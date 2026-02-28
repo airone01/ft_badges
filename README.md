@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  <img alt="42 Projects Count" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fairone01%2Fft_badges%2Frefs%2Fheads%2Fmain%2Fconfig.json&query=%24.project_count&style=flat-square&labelColor=020617&color=5a45fe&logo=42&label=Supported Projects">
+  <img alt="42 Projects Count" src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/config.json&query=$.project_count&style=flat-square&labelColor=020617&color=5a45fe&logo=42&label=Supported Projects">
   <img alt="The Unlicense license" src="https://img.shields.io/badge/License-Unlicense-ef00c7?style=flat-square&logo=unlicense&logoColor=fff&labelColor=020617">
   <img alt="Made with Python" src="https://img.shields.io/badge/Made_with-Python-ff2b89?style=flat-square&logo=python&logoColor=fff&labelColor=020617">
   <img alt="Repo size" src="https://img.shields.io/github/repo-size/airone01/ft_badges?style=flat-square&logo=svg&logoColor=fff&label=Repo%20Size&labelColor=020617&color=ff8059">
