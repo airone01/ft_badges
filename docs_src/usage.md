@@ -67,3 +67,40 @@ If you find the SVGs are displaying too large in your README, you can use HTML
   width="200"
 />
 ```
+
+---
+
+## Local Development & CLI
+
+If you want to generate a custom badge with a unique name or a specific HEX
+color, you can use the `ft_badges` Python CLI.
+
+### Installation
+
+```bash
+git clone [https://github.com/airone01/ft_badges.git](https://github.com/airone01/ft_badges.git)
+cd ft_badges
+# optionally  set up a venv here as needed
+pip install -r requirements.txt
+```
+
+### Commands
+
+**Generate a single custom badge**:
+
+```bash
+./main.py gen badge --project "My Custom Project" --score 125 --logo logo --theme dark --variant noisy --color "#FF5733"
+```
+
+**Regenerate the entire batch & catalog**:
+
+```bash
+# update all SVGs
+./main.py gen badge --batch
+# update the Markdown docs files
+./main.py gen docs --batch
+```
+
+> [!NOTE]
+> You can also pass `--config=my_config.json` to process a completely custom
+> batch matrix

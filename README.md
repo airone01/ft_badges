@@ -22,79 +22,31 @@
 
 **[ft_badges Documentation](https://airone01.github.io/ft_badges/)**
 
-There, you can browse a visual catalog of all pre-generated badges for standard
-42 projects (like `libft`, `ft_printf`, and `minishell`) and instantly copy the
-exact Markdown snippets needed for your README.
+There, you can browse a visual catalog of all pre-generated badges for 42
+projects and instantly copy the exact Markdown snippets needed for your README.
 
 ---
 
-## Quick Usage
+## Preview Styles
 
-> [!WARNING]
-> This project is in Alpha. Expect unannounced breaking changes and large
-> commits because of the hundreds of SVGs.
+| Classic / Light                                                                                                                 | Noisy / Dark                                                                                                                    |
+| :------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------ |
+| ![libft](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--125--logo--light--classic.svg)      | ![minishell](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/minishell--125--logo--dark--noisy.svg) |
+| ![printf](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/ft_printf--100--text--light--classic.svg) | ![inception](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/inception--125--text--dark--noisy.svg) |
 
-If you just want to embed a pre-generated badge for a standard project, you
-don't need to download or install anything. Just construct the URL based on your
-project and score:
+## Quick Start
+
+The easiest way to use these is via the pre-generated URLs. Just drop this into
+your `README.md`:
 
 ```markdown
 ![Libft Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--125--logo--dark--noisy.svg)
 ```
 
-**URL Format Convention**:
-
-```
-https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/{project_name}--{score}--{logo_style}--{theme}--{variant}.svg
-```
-
-For a full breakdown of the parameters, check out the
-[**Usage Guide**](https://airone01.github.io/ft_badges/usage/).
+For the full list of parameters (themes, variants, and scores), please visit the
+[documentation](https://airone01.github.io/ft_badges/).
 
 ---
-
-## Local Generation using the CLI
-
-Want to generate a custom badge with a unique name, specific score, or forced
-hex color? You can use the `ft_badges` Python CLI locally. The CLI automatically
-handles text wrapping and uses `scour` to optimize the SVG output.
-
-### Installation
-
-Clone the repository and install the Python dependencies:
-
-```bash
-git clone https://github.com/airone01/ft_badges.git
-cd ft_badges
-# optionally  set up a venv here as needed
-pip install -r requirements.txt
-```
-
-### Generate Custom Badges
-
-To generate a single badge with arbitrary values, use the `gen badge` command:
-
-```bash
-./main.py gen badge --project "My Custom C++" --score 112 --logo text --theme dark --variant noisy
-```
-
-### Batch Generation
-
-If you are modifying the template or configuration and want to regenerate the
-entire matrix of standard badges and their corresponding MkDocs Markdown files,
-use the `--batch` flag:
-
-```bash
-# generate just the svg badges
-./main.py gen badge --batch
-
-# generate svg badges and update the MkDocs catalog
-./main.py gen md --batch
-```
-
-> [!NOTE]
-> You can also pass `--config=my_config.json` to process a completely custom
-> batch matrix
 
 ## License
 

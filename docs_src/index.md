@@ -5,6 +5,10 @@ Whether you want to show off your perfect 125% score or just add some visual
 flair to your GitHub profile, ft_badges generates clean, responsive, and
 beautifully themed SVGs that you can drop directly into your `README.md`.
 
+> [!WARNING]
+> This project is in Alpha. Expect unannounced breaking changes and large
+> commits because of the hundreds of SVGs.
+
 ## Features
 
 - **Multiple Themes:** Choose between `dark` and `light` modes to match your
