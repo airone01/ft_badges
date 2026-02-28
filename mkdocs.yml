@@ -7,6 +7,9 @@ theme:
 docs_dir: markdown_src
 site_dir: docs
 
+markdown_extensions:
+  - codehilite
+
 nav:
   - Home: index.md
   - Projects:
