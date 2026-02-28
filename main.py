@@ -9,6 +9,9 @@ import colorsys
 from jinja2 import Environment, FileSystemLoader
 
 SITE_URL = "https://airone01.github.io/ft_badges"
+IMG_ORIGIN_URL = (
+    "https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges"
+)
 
 with open("config.json", "r") as f:
     config = json.load(f)
@@ -40,7 +43,7 @@ def generate_markdown(badges_metadata):
             )
 
             for badge in badges:
-                img_url = f"{SITE_URL}/badges/{badge['filename']}"
+                img_url = f"{IMG_ORIGIN_URL}/badges/{badge['filename']}"
                 md_snippet = f"![{project_name} Badge]({img_url})"
 
                 f.write(

@@ -1,4 +1,4 @@
-name: Build and Deploy 42 Badges
+name: Build and deploy documentation
 
 on:
   push:
@@ -29,20 +29,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Set up Node & pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-      - run: pnpm install svgo -g
-
-      - name: Install Python dependencies
+      - name: Install Python deps
         run: |
           pip install -r requirements.txt
 
-      - name: Run Badge and Markdown Generator
-        run: python main.py batch
-
-      - name: Build MkDocs Site
+      - name: Build documentation
         run: mkdocs build
 
       - name: Setup GitHub Pages
