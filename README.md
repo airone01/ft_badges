@@ -24,8 +24,6 @@
 There, you can browse a visual catalog of all pre-generated badges for 42
 projects and instantly copy the exact Markdown snippets needed for your README.
 
----
-
 ## Preview Styles
 
 | Classic / Light / Square                                                                                                                | Noisy / Dark / Pentagon                                                                                                                   |
@@ -39,14 +37,12 @@ The easiest way to use these is via the pre-generated URLs. Just drop this into
 your `README.md`:
 
 ```markdown
-![Libft Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--125--logo--dark--noisy.svg)
+![Libft Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--square--125--logo--dark--noisy.svg)
 ```
 
 > [!NOTE]
 > For the full list of parameters (themes, variants, and scores), please visit
 > the [documentation](https://airone01.github.io/ft_badges/).
-
----
 
 ## License
 
