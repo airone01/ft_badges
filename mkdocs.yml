@@ -25,4 +25,6 @@ nav:
     - FdF: projects/fdf.md
     - fract-ol: projects/fract-ol.md
     - Philosophers: projects/philosophers.md
+    - cub3d: projects/cub3d.md
+    - miniRT: projects/miniRT.md
     - minishell: projects/minishell.md

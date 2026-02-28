@@ -62,6 +62,14 @@
         "color": "#00babc",
         "threshold": 50
       },
+      "cub3d": {
+        "color": "#00babc",
+        "threshold": 50
+      },
+      "miniRT": {
+        "color": "#00babc",
+        "threshold": 50
+      },
       "minishell": {
         "color": "#00babc",
         "threshold": 50
