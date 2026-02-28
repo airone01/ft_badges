@@ -18,84 +18,32 @@
       "text_color": "#24292f"
     }
   },
+  "default_project_data": {
+    "color": "#00babc",
+    "threshold": 50
+  },
+  "project_count": 19,
   "batch_matrices": {
     "projects": {
-      "Libft": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "ft_printf": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "Born2beroot": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "get_next_line": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "push_swap": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "pipex": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "minitalk": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "so_long": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "FdF": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "fract-ol": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "Philosophers": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "cub3d": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "miniRT": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "NetPractice": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "minishell": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "ft_irc": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "webserv": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "Inception": {
-        "color": "#00babc",
-        "threshold": 50
-      },
-      "ft_transcendence": {
-        "color": "#00babc",
-        "threshold": 50
-      }
+      "Born2beroot": {},
+      "cub3d": {},
+      "FdF": {},
+      "fract-ol": {},
+      "ft_irc": {},
+      "ft_printf": {},
+      "ft_transcendence": {},
+      "get_next_line": {},
+      "Inception": {},
+      "Libft": {},
+      "miniRT": {},
+      "minishell": {},
+      "minitalk": {},
+      "NetPractice": {},
+      "Philosophers": {},
+      "pipex": {},
+      "push_swap": {},
+      "so_long": {},
+      "webserv": {}
     },
     "scores": [
       0,

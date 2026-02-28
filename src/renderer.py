@@ -70,7 +70,14 @@ def render_svg(
     template = env.get_template("src/badge_template.svg")
 
     theme_colors: ThemeColors = APP_CONFIG["theme_data"].get(
-        theme, APP_CONFIG["theme_data"]["dark"]
+        theme,
+        APP_CONFIG["theme_data"].get(
+            "dark", {"bg_color": "#121418", "text_color": "#ffffff"}
+        ),
+    )
+
+    defaults: ProjectData = APP_CONFIG.get(
+        "default_project_data", {"color": "#00babc", "threshold": 50}
     )
 
     accent: str
@@ -78,13 +85,13 @@ def render_svg(
         accent = custom_color
     else:
         project_data: ProjectData = APP_CONFIG["batch_matrices"]["projects"].get(
-            project, {"color": "#00babc", "threshold": 50}
+            project, {}
         )
-        accent = (
-            "#E74C3C"
-            if int(score) < project_data.get("threshold", 50)
-            else project_data["color"]
+        threshold: int = project_data.get("threshold", defaults.get("threshold", 50))
+        resolved_color: str = project_data.get(
+            "color", defaults.get("color", "#00babc")
         )
+        accent = "#E74C3C" if int(score) < threshold else resolved_color
 
     clean_name: str = project.replace(" ", "_").lower()
     filename: str = f"{clean_name}--{score}--{logo_style}--{theme}--{variant}.svg"

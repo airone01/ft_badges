@@ -6,7 +6,8 @@ class ThemeColors(TypedDict):
     text_color: str
 
 
-class ProjectData(TypedDict):
+# total=False means keys are optional
+class ProjectData(TypedDict, total=False):
     color: str
     threshold: int
 
@@ -20,9 +21,9 @@ class BatchMatrices(TypedDict):
 
 
 class ConfigData(TypedDict):
-    site_url: str
-    img_origin_url: str
+    project_count: int
     schema: list[str]
+    default_project_data: ProjectData
     theme_data: dict[str, ThemeColors]
     batch_matrices: BatchMatrices
 
