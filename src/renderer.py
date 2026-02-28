@@ -33,7 +33,7 @@ def generate_project_gradient(project_name: str) -> list[str]:
     return colors
 
 
-def format_project_name(name: str) -> dict:
+def format_project_name(name: str, shape: str = "rect") -> dict:
     """Calculates text wrapping and dynamic font sizing for the project name."""
     words = name.split()
     if len(words) <= 1:
@@ -41,6 +41,10 @@ def format_project_name(name: str) -> dict:
         # scale down if longer than 10 chars
         # min font size 12
         font_size = 26 if length <= 10 else max(12, int(260 / length))
+
+        if shape == "pentagon" and length > 8:
+            font_size = max(10, int(font_size * 0.85))
+
         return {
             "is_multiline": False,
             "line1": name,
@@ -50,11 +54,16 @@ def format_project_name(name: str) -> dict:
     else:
         # split into two lines at middle-most space
         mid = (len(words) + 1) // 2
+        font_size = 20
+
+        if shape == "pentagon":
+            font_size = 16
+
         return {
             "is_multiline": True,
             "line1": " ".join(words[:mid]),
             "line2": " ".join(words[mid:]),
-            "font_size": 20,
+            "font_size": font_size,
         }
 
 
@@ -99,7 +108,7 @@ def render_svg(
         f"{clean_name}--{shape}--{score}--{logo_style}--{theme}--{variant}.svg"
     )
     grad1, grad2, grad3 = generate_project_gradient(project)
-    name_data = format_project_name(project)
+    name_data = format_project_name(project, shape)
 
     raw_svg: str = template.render(
         project_name=project,
