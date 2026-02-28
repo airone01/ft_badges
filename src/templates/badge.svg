@@ -79,12 +79,21 @@
     {% endif %}
   {% endif %}
 
+  <!-- top logo/text -->
   {% if logo_style == 'logo' %}
-    <g transform="translate(76, 30) scale(2)">
+    {% if shape == 'pentagon' %}
+      <g transform="translate(72, 40) scale(2)">
+    {% else %}
+      <g transform="translate(72, 30) scale(2)">
+    {% endif %}
       <path fill="{{ text_color }}" opacity="0.5" d="M19.581 16.851H24v-4.439ZM24 3.574h-4.419v4.42l-4.419 4.418v4.44h4.419v-4.44L24 7.993Zm-4.419 0h-4.419v4.42zm-6.324 8.838H4.419l8.838-8.838H8.838L0 12.412v3.595h8.838v4.419h4.419z"/>
     </g>
   {% elif logo_style == 'text' %}
-    <text x="100" y="60" font-family="monospace" font-size="20" font-weight="bold" fill="{{ text_color }}" text-anchor="middle" opacity="0.5">[ 42 ]</text>
+    {% if shape == 'pentagon' %}
+      <text x="100" y="70" font-family="monospace" font-size="20" font-weight="bold" fill="{{ text_color }}" text-anchor="middle" opacity="0.5">[ 42 ]</text>
+    {% else %}
+      <text x="100" y="60" font-family="monospace" font-size="20" font-weight="bold" fill="{{ text_color }}" text-anchor="middle" opacity="0.5">[ 42 ]</text>
+    {% endif %}
   {% endif %}
   
   <text x="100" y="104" font-family="sans-serif" font-size="{{ name_data.font_size }}" font-weight="900" fill="{{ text_color }}" text-anchor="middle" filter="url(#shadow)">
