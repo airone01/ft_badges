@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+from collections import defaultdict
 import json
 import os
 import subprocess
@@ -7,12 +8,49 @@ import hashlib
 import colorsys
 from jinja2 import Environment, FileSystemLoader
 
+SITE_URL = "https://airone01.github.io/ft_badges"
+
 with open("config.json", "r") as f:
     config = json.load(f)
 
 OUTPUT_DIR = "badges"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 env = Environment(loader=FileSystemLoader("."))
+
+
+def generate_markdown(badges_metadata):
+    """Generates MkDocs-compatible Markdown files with category frontmatter."""
+    os.makedirs("markdown_src/projects", exist_ok=True)
+
+    projects_dict = defaultdict(list)
+    for badge in badges_metadata:
+        projects_dict[badge["project_name"]].append(badge)
+
+    for project_name, badges in projects_dict.items():
+        clean_name = project_name.replace(" ", "_").lower()
+        filepath = f"markdown_src/projects/{clean_name}.md"
+
+        with open(filepath, "w") as f:
+            f.write("---\n")
+            f.write(f"title: {project_name}\n")
+            f.write("---\n\n")
+
+            f.write(
+                "Copy the markdown snippet below your favorite badge to use it in your README.\n\n"
+            )
+
+            for badge in badges:
+                img_url = f"{SITE_URL}/badges/{badge['filename']}"
+                md_snippet = f"![{project_name} Badge]({img_url})"
+
+                f.write(
+                    f"### Score: {badge['score']} | {badge['theme'].title()} | {badge['variant'].title()}\n\n"
+                )
+                f.write(
+                    f'<img src="{img_url}" width="200" alt="{project_name} badge">\n\n'
+                )
+                f.write(f"```markdown\n{md_snippet}\n```\n\n")
+                f.write("---\n\n")
 
 
 def generate_project_gradient(project_name):
@@ -84,6 +122,7 @@ def render_svg(project, score, logo_style, theme, variant, custom_color=None):
         "score": score,
         "theme": theme,
         "logo_style": logo_style,
+        "variant": variant,
     }
 
 
@@ -109,9 +148,11 @@ def run_batch():
     except Exception as e:
         print(f"SVGO skipped or failed: {e}")
 
+    generate_markdown(generated_badges)
+
 
 def setup_cli():
-    parser = argparse.ArgumentParser(description="42 Badge Generator CLI")
+    parser = argparse.ArgumentParser(description="ft_badges generator CLI")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     subparsers.add_parser("batch", help="Generate all standard badges from config.json")

@@ -1,0 +1,14 @@
+site_name: ft_badges
+site_url: https://airone01.github.io/ft_badges/
+theme:
+  name: shadcn
+  icon: lucide:award
+
+docs_dir: markdown_src
+site_dir: docs
+
+nav:
+  - Home: index.md
+  - Projects:
+    - Libft: projects/libft.md
+    - Minishell: projects/minishell.md
