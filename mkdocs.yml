@@ -19,4 +19,5 @@ nav:
     - Bord2beroot: projects/born2beroot.md
     - get_next_line: projects/get_next_line.md
     - push_swap: projects/push_swap.md
+    - pipex: projects/pipex.md
     - minishell: projects/minishell.md

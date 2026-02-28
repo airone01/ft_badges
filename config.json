@@ -38,6 +38,10 @@
         "color": "#00babc",
         "threshold": 50
       },
+      "pipex": {
+        "color": "#00babc",
+        "threshold": 50
+      },
       "minishell": {
         "color": "#00babc",
         "threshold": 50
