@@ -2,6 +2,7 @@ import os
 import hashlib
 import colorsys
 from jinja2 import Environment, FileSystemLoader
+from scour.scour import scourString, sanitizeOptions
 from src.types import BadgeMeta, ThemeColors, ProjectData
 from src.config import APP_CONFIG, OUTPUT_DIR
 
@@ -65,7 +66,7 @@ def render_svg(
     variant: str,
     custom_color: str | None = None,
 ) -> BadgeMeta:
-    """Renders a single SVG and returns its metadata dictionary."""
+    """Renders a single SVG, optimizes it with Scour, and returns its metadata."""
     template = env.get_template("src/badge_template.svg")
 
     theme_colors: ThemeColors = APP_CONFIG["theme_data"].get(
@@ -90,22 +91,39 @@ def render_svg(
     grad1, grad2, grad3 = generate_project_gradient(project)
     name_data = format_project_name(project)
 
-    rendered: str = template.render(
+    raw_svg: str = template.render(
         project_name=project,
+        name_data=name_data,
         score=score,
         logo_style=logo_style,
         bg_color=theme_colors["bg_color"],
         text_color=theme_colors["text_color"],
         accent_color=accent,
         variant=variant,
-        name_data=name_data,
         grad1=grad1,
         grad2=grad2,
         grad3=grad3,
     )
 
+    scour_options = sanitizeOptions(options=None)
+    scour_options.remove_metadata = True
+    scour_options.strip_comments = True
+    scour_options.shorten_ids = True
+    scour_options.indent_type = "none"
+    scour_options.strip_xml_prolog = True
+    scour_options.strip_xml_space = True
+    scour_options.no_line_breaks = True
+    scour_options.enable_viewboxing = True
+    scour_options.enable_comment_stripping = True
+    scour_options.create_groups = True
+    scour_options.remove_titles = True
+    scour_options.remove_descriptions = True
+    scour_options.remove_metadata = True
+
+    optimized_svg: str = scourString(raw_svg, options=scour_options)
+
     with open(os.path.join(OUTPUT_DIR, filename), "w") as f:
-        _ = f.write(rendered)
+        _ = f.write(optimized_svg)
 
     return {
         "filename": filename,
