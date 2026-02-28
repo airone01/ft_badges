@@ -19,7 +19,7 @@
 ## Documentation & Badge Catalog
 
 **The easiest way to use ft_badges is to visit the
-[**documentation**](https://airone01.github.io/ft_badges/) website!**
+[**documentation**](https://airone01.github.io/ft_badges/).**
 
 There, you can browse a visual catalog of all pre-generated badges for 42
 projects and instantly copy the exact Markdown snippets needed for your README.
@@ -28,10 +28,10 @@ projects and instantly copy the exact Markdown snippets needed for your README.
 
 ## Preview Styles
 
-| Classic / Light                                                                                                                 | Noisy / Dark                                                                                                                    |
-| :------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------ |
-| ![libft](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--125--logo--light--classic.svg)      | ![minishell](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/minishell--125--logo--dark--noisy.svg) |
-| ![printf](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/ft_printf--100--text--light--classic.svg) | ![inception](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/inception--125--text--dark--noisy.svg) |
+| Classic / Light / Square                                                                                                                | Noisy / Dark / Pentagon                                                                                                                   |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| ![libft](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--square--125--logo--light--classic.svg)      | ![minishell](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/minishell--pentagon--125--logo--dark--noisy.svg) |
+| ![printf](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/ft_printf--square--100--text--light--classic.svg) | ![inception](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/inception--pentagon--125--text--dark--noisy.svg) |
 
 ## Quick Start
 
@@ -42,8 +42,9 @@ your `README.md`:
 ![Libft Badge](https://raw.githubusercontent.com/airone01/ft_badges/refs/heads/main/badges/libft--125--logo--dark--noisy.svg)
 ```
 
-For the full list of parameters (themes, variants, and scores), please visit the
-[documentation](https://airone01.github.io/ft_badges/).
+> [!NOTE]
+> For the full list of parameters (themes, variants, and scores), please visit
+> the [documentation](https://airone01.github.io/ft_badges/).
 
 ---
 
