@@ -18,7 +18,7 @@
   },
   "batch_matrices": {
     "projects": {
-      "libft": {
+      "Libft": {
         "color": "#00babc",
         "threshold": 50
       },
@@ -26,7 +26,7 @@
         "color": "#00babc",
         "threshold": 50
       },
-      "born2beroot": {
+      "Born2beroot": {
         "color": "#00babc",
         "threshold": 50
       },
